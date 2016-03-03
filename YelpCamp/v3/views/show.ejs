@@ -1,0 +1,15 @@
+<% include partials/header %>
+
+  <div class="container">
+    <h1><%= campground.name %></h1>
+      <img src="<%= campground.image %>">
+        <p> <%= campground.description %> </p>
+  </div>
+
+  <% campground.comments.forEach(function(prop) { %>
+
+    <p> <strong> <%= prop.author %> </strong> - <%= prop.text %> </p>
+
+  <% }); %>
+
+<% include partials/footer %>

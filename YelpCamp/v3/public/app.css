@@ -1,0 +1,15 @@
+.thumbnail {
+  height: 320px;
+}
+
+.thumbnail img {
+  height: 200px;
+}
+
+.thumbnail p {
+  text-align: center;
+}
+
+.thumbnail .caption {
+  text-align: center;
+}
