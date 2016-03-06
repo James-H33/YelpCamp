@@ -14,7 +14,7 @@ var commentRoutes    = require('./routes/comments'),
     authRoutes       = require('./routes/index')
 
 
-mongoose.connect('mongodb://localhost/yelp_camp_v7');
+mongoose.connect('mongodb://localhost/yelp_camp_v8');
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -33,17 +33,17 @@ app.use(function(req, res, next){
   next();
 });
 
-// Requiring Routes
-app.use(campgroundRoutes);
-app.use(commentRoutes);
-app.use(authRoutes);
-
+// Passport
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// Requiring Routes | This needs to go below Passport
+app.use(campgroundRoutes);
+app.use(commentRoutes);
+app.use(authRoutes);
 
 app.listen(27017, function(){
    console.log("The YelpCamp Server Has Started!");

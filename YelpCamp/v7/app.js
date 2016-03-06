@@ -33,16 +33,17 @@ app.use(function(req, res, next){
   next();
 });
 
-// Requiring Routes
-app.use(campgroundRoutes);
-app.use(commentRoutes);
-app.use(authRoutes);
-
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// Requiring Routes
+app.use(campgroundRoutes);
+app.use(commentRoutes);
+app.use(authRoutes);
+
 
 
 app.listen(27017, function(){
