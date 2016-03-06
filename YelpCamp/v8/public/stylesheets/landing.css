@@ -1,0 +1,62 @@
+body {
+
+}
+
+h1 {
+  font-size: 5vw;
+  color: #fff;
+  text-shadow: 0 1px 5px black;
+}
+
+.contentContainer a {
+  color: rgba(30, 30, 30, .8);
+  font-family: sans;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 30px auto;
+}
+
+.contentContainer a:hover {
+  text-decoration: none;
+  color: rgba(30, 30, 30, .8);
+}
+
+.btn-primary {
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+}
+
+.btn-primary:hover {
+  background-color: rgba(200, 200, 200, 0.95);
+  border-color: rgba(200, 200, 200, 0.95);
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.navbar-default {
+  margin-bottom: 0;
+}
+
+
+.contentContainer {
+  height: 500px;
+  width: 100%;
+  padding: 1em;
+  max-height: 500px;
+  background: url("http://onehdwallpaper.com/wp-content/uploads/2015/07/Free-Download-Mountain-Hd-Wallpapers.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.headerContent {
+  padding-top: 100px;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+
+
+}

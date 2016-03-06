@@ -1,0 +1,16 @@
+Files installed: For Authentication Functionality
+
+npm install
+  passport
+  passport-local
+  passport-local-mongoose
+  express-session
+
+
+  app.use(function(req, res, next){
+    res.locals.user = req.user;
+    next();
+  });
+
+  --- res.locals not working as intended.
+  --- Had to include req.user within every app.get callback in order for the program to work as intended.
